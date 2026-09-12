@@ -1,15 +1,23 @@
-# QFTE – Quantitative Futures & Telegram Engine
+# QFTE
 
-Moteur quantitatif multi-sports pour les paris sportifs.  
-Telegram = interface. Le cerveau est indépendant.
+QFTE est un projet Python pour l’entraînement et l’évaluation de modèles de prédiction, avec un accent sur la calibration des probabilités.
 
-## Stack
+## Structure principale
 
-- Python 3.11+
-- FastAPI, aiogram, pydantic, SQLAlchemy async, Redis
-- Docker + docker-compose
-- GitHub Actions (CI)
+- `app/calibration/` : méthodes de calibration (Platt, Isotonic, Beta, etc.) et recalibration adaptative.
+- `app/models/` : modèles de classification (logistic regression, etc.) et modèles de scores.
+- `app/metrics/` : métriques (Log Loss, Brier score, ECE, etc.).
+- `app/data/` : chargement et préprocessing des données.
+- `app/utils/` : utilitaires (I/O, validation, etc.).
+- `examples/` : scripts d’exemple pour chaque module.
 
-## Roadmap
+## Exemples
 
-Voir `docs/QFTE_ROADMAP.md`.
+Voir le dossier `examples/` :
+
+```bash
+python examples/calibration_example.py
+python examples/logistic_calibration_example.py
+python examples/full_data_pipeline_example.py
+git clone <ton-depot>
+cd Qfte
