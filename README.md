@@ -45,6 +45,30 @@ python examples/backtest_football_example.py
 
 ## Lancer le pipeline
 
+## Bot Telegram
+
+Le bot Telegram QFTE est un assistant privé pour analyser des matchs (football, basketball, tennis) avec la méthodologie QFTE (modèles + calibration + backtest).
+
+### Configuration
+
+1. Crée un bot via [@BotFather](https://t.me/BotFather) sur Telegram :
+   - Envoie `/newbot` et suis les instructions.
+   - Copie le token fourni (ex. : `123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11`).
+
+2. Récupère ton user ID Telegram :
+   - Utilise un bot comme [@userinfobot](https://t.me/userinfobot) ou [@getmyid_bot](https://t.me/getmyid_bot).
+   - Note ton user ID (nombre entier, ex. : `123456789`).
+
+3. Dans le fichier `bot/config.py` :
+   - Remplace `TELEGRAM_BOT_TOKEN = "TON_TOKEN_ICI"` par ton token.
+   - Remplace `TELEGRAM_USER_ID = 0` par ton user ID.
+
+### Installation des dépendances
+
+Depuis la racine du projet :
+
+```bash
+pip install -r requirements.txt
 Pour lancer le pipeline complet (calibration + backtest) sur les données d’exemple :
 
 ```bash
