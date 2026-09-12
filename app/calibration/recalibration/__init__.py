@@ -1,13 +1,52 @@
-# app/calibration/recalibration/__init__.py
+# app/calibration/__init__.py
 """
-Module de recalibration pour QFTE.
+Module de calibration pour QFTE.
 
-Ce sous-module fournira :
-- Détection de dérive (drift detection).
-- Stratégies de recalibration (périodique, déclenchée par drift).
-- Gestion des données de recalibration (buffer, échantillonnage).
+Fournit des méthodes de calibration des probabilités :
+- Platt scaling
+- Isotonic regression
+- Beta calibration
+- Calibration hybride (ensemble, adaptative, en ligne)
+- Gestion de la recalibration (drift detection, stratégies)
 """
 
-# Les imports seront ajoutés au fur et à mesure.
+from .methods.platt import PlattScaler
+from .methods.isotonic import IsotonicScaler
+from .methods.beta import BetaCalibrator
+from .methods.temperature_scaling import TemperatureScaling
+from .methods.histogram import HistogramCalibrator
 
-__all__: list[str] = []
+from .hybrid.ensemble_calibration import EnsembleCalibrator
+from .hybrid.adaptive_calibration import AdaptiveCalibrator
+
+from .recalibration.drift_detection import DriftDetector
+from .recalibration.recalibration_strategy import (
+    RecalibrationStrategy,
+    PeriodicStrategy,
+    DriftBasedStrategy,
+    HybridStrategy,
+)
+from .recalibration.recalibration_manager import RecalibrationManager
+
+from .manager import CalibrationManager
+
+__all__: list[str] = [
+    # Méthodes de base
+    "PlattScaler",
+    "IsotonicScaler",
+    "BetaCalibrator",
+    "TemperatureScaling",
+    "HistogramCalibrator",
+    # Calibration hybride
+    "EnsembleCalibrator",
+    "AdaptiveCalibrator",
+    # Recalibration
+    "DriftDetector",
+    "RecalibrationStrategy",
+    "PeriodicStrategy",
+    "DriftBasedStrategy",
+    "HybridStrategy",
+    "RecalibrationManager",
+    # Manager principal
+    "CalibrationManager",
+]
