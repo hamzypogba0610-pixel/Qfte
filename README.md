@@ -14,6 +14,7 @@ QFTE est un projet Python pour l’entraînement et l’évaluation de modèles 
 - `app/data/` : chargement et préprocessing des données.
 - `app/utils/` : utilitaires (I/O, validation, etc.).
 - `app/experiments/` : configurations et lancement d’expériences.
+- `app/backtest/` : moteur de backtest et métriques de performance (PnL, Sharpe, drawdown, etc.).
 - `examples/` : scripts d’exemple pour chaque module.
 
   ## Exemples
@@ -39,22 +40,15 @@ python examples/experiment_example.py
 # Comparaison de modèles
 python examples/compare_models_example.py
 
+```bash
+# Backtest football
+python examples/backtest_football_example.py
 ***
 
 ## Partie 4 – Installation
 
-```markdown
 ## Installation
+...
 
-```bash
-git clone <ton-depot>
-cd Qfte
-
-***
-
-## Partie 5 – Licence
-
-```markdown
 ## Licence
-
-À définir.
+...
