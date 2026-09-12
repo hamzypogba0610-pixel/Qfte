@@ -17,7 +17,7 @@ QFTE est un projet Python pour l’entraînement et l’évaluation de modèles 
 - `app/backtest/` : moteur de backtest et métriques de performance (PnL, Sharpe, drawdown, etc.).
 - `examples/` : scripts d’exemple pour chaque module.
 
-  ## Exemples
+## Exemples
 
 Voir le dossier `examples/` :
 
@@ -40,15 +40,21 @@ python examples/experiment_example.py
 # Comparaison de modèles
 python examples/compare_models_example.py
 
-```bash
 # Backtest football
 python examples/backtest_football_example.py
-***
 
+## Lancer le pipeline
+
+Pour lancer le pipeline complet (calibration + backtest) sur les données d’exemple :
+
+```bash
+python scripts/run_full_pipeline.py
 ## Partie 4 – Installation
 
 ## Installation
-...
+
+...git clone <ton-depot>
+cd Qfte
 
 ## Licence
 ...
