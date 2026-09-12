@@ -1,9 +1,26 @@
 # app/models/__init__.py
 """
-Modèles probabilistes et utilitaires pour QFTE.
+Modèles pour QFTE.
+
+Inclut :
+- Classes de base.
+- Régression logistique.
+- Modèles de scores (Poisson, Dixon-Coles, etc.).
+- Métriques et schémas associés.
+- Backtest.
 """
 
-# Ces imports seront complétés au fur et à mesure qu'on créera les fichiers.
-# Pour l'instant, on laisse le module vide mais documenté.
+from .base import BaseModel
+from .logistic import LogisticRegression
 
-__all__: list[str] = []
+# Imports existants (à adapter si besoin)
+# from .metrics import ...
+# from .poisson import ...
+# from .dixon_coles import ...
+# from .backtest import ...
+
+__all__: list[str] = [
+    "BaseModel",
+    "LogisticRegression",
+    # Ajoute ici les autres modèles au fur et à mesure
+]
