@@ -6,6 +6,25 @@ Moteurs de décision et de marché pour QFTE.
 - decision: règles BET / WATCH / PASS.
 """
 
-# Les imports seront ajoutés au fur et à mesure.
+from .market import (
+    implied_probs_from_odds,
+    ev_for_outcome,
+    ev_for_match,
+)
 
-__all__: list[str] = []
+from .decision import (
+    Decision,
+    DecisionContext,
+    decide_bet,
+    build_decision_context,
+)
+
+__all__ = [
+    "implied_probs_from_odds",
+    "ev_for_outcome",
+    "ev_for_match",
+    "Decision",
+    "DecisionContext",
+    "decide_bet",
+    "build_decision_context",
+]
