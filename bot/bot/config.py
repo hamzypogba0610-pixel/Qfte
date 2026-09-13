@@ -7,11 +7,11 @@ Configuration du bot Telegram QFTE.
 # Telegram
 # -------------------------
 # À remplacer par ton vrai token obtenu via @BotFather
-TELEGRAM_BOT_TOKEN = "TON_TOKEN_ICI"
+TELEGRAM_BOT_TOKEN = 8618820048:AAELojxJD5WtZWlqrSzaHv5k44hXjNZ5Kr0
 
 # Ton user ID Telegram (le bot est privé, un seul utilisateur)
 # Tu peux l'obtenir avec des bots comme @userinfobot ou @getmyid_bot
-TELEGRAM_USER_ID = 0  # remplace 0 par ton vrai user ID (int)
+TELEGRAM_USER_ID =8732639465  # remplace 0 par ton vrai user ID (int)
 
 # -------------------------
 # Comportement du bot
